@@ -98,6 +98,7 @@ section{
     
     @keyframes jump {
         0% {
+            /*The additional 3 pixels give the impression that Harry's landing is smoother*/
             top: 233px;
         }
     
