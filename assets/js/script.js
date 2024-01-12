@@ -13,9 +13,14 @@ var checkDead = setInterval(function () {
     var harryTop = parseInt(window.getComputedStyle(harry).getPropertyValue("top"));
     var dobbyLeft = parseInt(window.getComputedStyle(dobby).getPropertyValue("left"));
 
-    if (isTablet()) {
+    if (isLaptop()) {
+        if (dobbyLeft < 80 && dobbyLeft > 0 && harryTop >=190 && harryTop <= 250) {
+            youLose();
+        }
+    } else if (isTablet()) {
+        
         if (dobbyLeft < 45 && dobbyLeft > 0 && harryTop >= 190 && harryTop <= 250) {
-        youLose();
+            youLose();
         }
     } else {
     
@@ -34,4 +39,7 @@ function youLose() {
 
 function isTablet() {
     return window.matchMedia("(min-width: 653px)").matches;
+}
+function isLaptop() {
+    return window.matchMedia("(min-width: 1024px)").matches;
 }

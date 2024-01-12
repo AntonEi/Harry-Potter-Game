@@ -181,11 +181,11 @@ section{
         }
 
         30% {
-            top: 180px;
+            top: 150px;
         }
 
         70% {
-            top: 180px;
+            top: 150px;
         }
 
         100% {
@@ -202,7 +202,7 @@ section{
         width: 80px;
         height: 80px;
         position: relative;
-        top: 190px;
+        top: 170px;
         left: 720px;
         animation: dobby 1.3s infinite linear;
     }
