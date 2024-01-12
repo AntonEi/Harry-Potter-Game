@@ -10,8 +10,8 @@ section{
     margin: 0;
 }
 #game{
-    width: 1000px;
-    height: 400px;
+    width: 280px;
+    height: 150px;
     border: 1px solid black;
     background: url(../images/hogwarts-castle.webp) no-repeat center center/cover;
 }
@@ -26,23 +26,23 @@ section{
 }    
 #harry>img{
     width: 40px;
-    height: 100px;
+    height: 80px;
 }
 #harry{
     width: 40px;
-    height: 100px;
-    position: relative;
-    top: 300px;
-    margin-left: 20px;
-}
-#dobby>img{
-    width: 40px;
-    height: 40px;
-}
-#dobby{
-    width: 40px;
     height: 80px;
     position: relative;
-    top: 260px;
-    left: 960px;
+    top: 70px;
+    margin-left: 10px;
+}
+#dobby>img{
+    width: 30px;
+    height: 30px;
+}
+#dobby{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 40px;
+    left: 250px;
 }
