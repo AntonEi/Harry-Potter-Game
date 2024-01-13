@@ -48,6 +48,9 @@ section{
     position: relative;
     top: 40px;
     left: 250px;
+
+}
+.animate-dobby{
     animation: dobby 1.3s infinite linear;
 }
 @keyframes dobby{
