@@ -51,6 +51,13 @@ function isLaptop() {
     return window.matchMedia("(min-width: 1024px)").matches;
 }
 
+function startGame(){
+    console.info('clicked')
+    document.addEventListener('click', jump);
+    document.getElementById('dobby').classList.add('animate-dobby');
+    gameStarted = true; 
+}
+
 let timeCounter = 5;
 let timerInterval = setInterval(() = > {
     timeCounter = timeCounter -1;
