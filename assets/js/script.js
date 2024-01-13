@@ -59,7 +59,7 @@ function startGame(){
 }
 
 let timeCounter = 5;
-let timerInterval = setInterval(() = > {
+let timerInterval = setInterval(() => {
     timeCounter = timeCounter -1;
     if (timeCounter > -1){
         document.getElementById('timer').innerHTML = timeCounter + 'Seconds';
