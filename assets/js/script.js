@@ -92,9 +92,47 @@ function harryDobbyGame() {
 }
 let game = document.getElementById ('game')
 let questionContainerElement = document.getElementById('question-container')
+let questionElement = document.getElementById('question')
+let answerButtonsElement = document.getElementById('answer-buttons')
+
+let shuffledQuestions, currentQuestionIndex
 
 function startQuiz(){
     console.log("Quiz Started");
     game.classList.add('hide')
-
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainerElement.classList.remove('hide')
+    setNextQuestion() 
 }
+
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex])
+}
+
+function showQuestion(question){
+    questionElement.innerText = question.question
+    question.answers.forEach(answer => {
+        let button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer)
+    });
+}
+
+function selectAnswer
+
+let questions = [
+    {
+        question: 'What is harrys name',
+        answers: [
+            { text: 'harry potter', correct: true },
+            { text: 'dumblerdore', correct: false },
+            { text: 'hagrid', correct: true },
+            { text: 'hermeiny', correct: true },
+        ]
+    }
+]
