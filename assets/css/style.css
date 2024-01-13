@@ -37,6 +37,10 @@ section{
     background: blue;
 }
 
+.hide {
+    display: none;
+}
+
 #harry>img{
     width: 40px;
     height: 80px;
