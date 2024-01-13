@@ -1,5 +1,10 @@
 var harry = document.getElementById("harry");
 var dobby = document.getElementById("dobby");
+
+let initialScore = 0;
+let checkCounter = 0;
+let gameStarted = false; 
+
 function jump(){
     if(harry.classList != "animate"){
         harry.classList.add("animate");
@@ -10,6 +15,8 @@ function jump(){
 }
 
 var checkDead = setInterval(function () {
+    checkCounter = checkCounter + 1;
+    let userLoses = false;
     var harryTop = parseInt(window.getComputedStyle(harry).getPropertyValue("top"));
     var dobbyLeft = parseInt(window.getComputedStyle(dobby).getPropertyValue("left"));
 
@@ -43,3 +50,16 @@ function isTablet() {
 function isLaptop() {
     return window.matchMedia("(min-width: 1024px)").matches;
 }
+
+let timeCounter = 5;
+let timerInterval = setInterval(() = > {
+    timeCounter = timeCounter -1;
+    if (timeCounter > -1){
+        document.getElementById('timer').innerHTML = timeCounter + 'Seconds';
+    }
+}, 1000);
+
+setTimeout(function(){
+    startGame();
+    clearInterval(timerInterval);
+}, 6000);
