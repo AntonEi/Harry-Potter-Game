@@ -17,6 +17,26 @@ section{
     background: url(../images/hogwarts-castle.webp) no-repeat center center/cover;
 }
 
+.container {
+    width: 280px;
+    max-width: 80%;
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+.btn-grid {
+    display: grid; 
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn{
+    background: blue;
+}
+
 #harry>img{
     width: 40px;
     height: 80px;
