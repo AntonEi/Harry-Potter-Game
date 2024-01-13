@@ -46,7 +46,7 @@ var checkDead = setInterval(function () {
 function youLose() {
     dobby.style.animation = "none";
     dobby.style.display = "none";
-    alert("You lose.");
+    startQuiz();
     clearInterval(checkDead);
 }
 
@@ -76,3 +76,7 @@ setTimeout(function(){
     startGame();
     clearInterval(timerInterval);
 }, 6000);
+
+function startQuiz(){
+    
+}
