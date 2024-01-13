@@ -34,7 +34,13 @@ var checkDead = setInterval(function () {
         if (dobbyLeft < 45 && dobbyLeft > 0 && harryTop >= 50 && harryTop <= 150) {
         youLose();
         }
-    }    
+    }
+    if (checkCounter % 100 === 0 && gameStarted === true){
+        if (userLoses == false){
+            initialScore = initialScore + 10;
+            document.getElementById('score').innerHTML = initialScore + ' Points';
+        }
+    }
 }, 10);
 
 function youLose() {
