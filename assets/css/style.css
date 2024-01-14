@@ -2,6 +2,14 @@ body{
     padding: 0;
     margin: 0;
 }
+
+.timescore {
+        width: 280px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+}
+
 .flex-container {
     display: flex;
     align-items: center;
@@ -106,6 +114,10 @@ section{
         height: 330px;
     }
     
+    .timescore {
+    width: 650px;
+    }
+
     #harry>img {
         width: 40px;
         height: 100px;
@@ -161,6 +173,10 @@ section{
     #game {
         width: 800px;
         height: 450px;
+    }
+
+    .timescore {
+        width: 800px;
     }
 
     #harry>img {
