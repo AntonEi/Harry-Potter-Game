@@ -90,6 +90,7 @@ function harryDobbyGame() {
     }, 6000);
 
 }
+
 let game = document.getElementById ('game')
 let questionContainerElement = document.getElementById('question-container')
 let continueButton = document.getElementById('continue-btn')
@@ -97,6 +98,17 @@ let questionElement = document.getElementById('question')
 let answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
+
+continueButton.addEventListener('click', () => {
+    harryDobbyGame()
+})
+
+function restartHarryGame (){
+    console.log("restart harry game");
+    questionContainerElement.classList.add('hide');
+    game.classList.remove('hide');
+    harryDobbyGame();
+}
 
 function startQuiz(){
     console.log("Quiz Started");
@@ -135,20 +147,23 @@ function resetState() {
 
 
 function selectAnswer(e) {
-    let selectedButton = e.target
-    let correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
-    })
+    let selectedButton = e.target;
+    let correct = selectedButton.dataset.correct === 'true'; 
+    setStatusClass(selectedButton, correct);
+
+    continueButton.classList.remove('hide');
 }
+
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
+        restartHarryGame();
+        setInterval
     } else {
         element.classList.add('wrong')
+        alert('you lose')
     }
 }
 function clearStatusClass(element) {
@@ -161,12 +176,48 @@ function clearStatusClass(element) {
 
 let questions = [
     {
-        question: 'What is harrys name?',
+        question: 'What is Harry\'s name?',
         answers: [
-            { text: 'Harry potter', correct: true },
-            { text: 'Dumblerdore', correct: false },
+            { text: 'Harry Potter', correct: true },
+            { text: 'Dumbledore', correct: false },
             { text: 'Hagrid', correct: false },
-            { text: 'Hermeiny', correct: false },
+            { text: 'Hermione', correct: false },
+        ]
+    },
+    {
+        question: 'Who is Harry\'s best friend?',
+        answers: [
+            { text: 'Ron Weasley', correct: true },
+            { text: 'Draco Malfoy', correct: false },
+            { text: 'Neville Longbottom', correct: false },
+            { text: 'Cedric Diggory', correct: false },
+        ]
+    },
+    {
+        question: 'What is the name of the magical school Harry attends?',
+        answers: [
+            { text: 'Hogwarts School of Witchcraft and Wizardry', correct: true },
+            { text: 'Beauxbatons Academy of Magic', correct: false },
+            { text: 'Durmstrang Institute', correct: false },
+            { text: 'Ilvermorny School of Witchcraft and Wizardry', correct: false },
+        ]
+    },
+    {
+        question: 'What is the name of Harry\'s owl?',
+        answers: [
+            { text: 'Hedwig', correct: true },
+            { text: 'Errol', correct: false },
+            { text: 'Crookshanks', correct: false },
+            { text: 'Pigwidgeon', correct: false },
+        ]
+    },
+    {
+        question: 'Who is the headmaster of Hogwarts?',
+        answers: [
+            { text: 'Albus Dumbledore', correct: true },
+            { text: 'Severus Snape', correct: false },
+            { text: 'Minerva McGonagall', correct: false },
+            { text: 'Gellert Grindelwald', correct: false },
         ]
     }
-]
+];
