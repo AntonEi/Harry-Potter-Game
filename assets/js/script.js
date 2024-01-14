@@ -151,6 +151,13 @@ function setStatusClass(element, correct) {
         element.classList.add('wrong')
     }
 }
+function clearStatusClass(element) {
+    
+    element.classList.remove('correct')
+    element.classList.remove('wrong');
+    console.log('all good here')
+}
+
 
 let questions = [
     {

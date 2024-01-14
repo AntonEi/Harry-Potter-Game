@@ -37,6 +37,13 @@ section{
     background: blue;
 }
 
+.btn.correct {
+    background: green;
+}
+.btn.wrong {
+    background: red;
+}
+
 .hide {
     display: none;
 }
