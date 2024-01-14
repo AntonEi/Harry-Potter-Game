@@ -102,7 +102,7 @@ function harryDobbyGame() {
     let timerInterval = setInterval(() => {
         timeCounter = timeCounter - 1;
         if (timeCounter > -1) {
-            document.getElementById('timer').innerHTML = timeCounter + 'Seconds';
+            document.getElementById('timer').innerHTML = 'Get ready! The game will start in ' + timeCounter + ' Seconds';
         }
     }, 1000);
 
@@ -113,6 +113,7 @@ function harryDobbyGame() {
     setTimeout(function () {
         startGame();
         clearInterval(timerInterval);
+        document.getElementById('timer').style.visibility = 'hidden';
     }, 6000);
 
     let game = document.getElementById ('game')
@@ -128,6 +129,7 @@ function harryDobbyGame() {
         console.log("restart harry game");
         questionContainerElement.classList.add('hide');
         game.classList.remove('hide');
+        document.getElementById('timer').style.visibility = 'visible';
 
         // Stop Dobby's animation during the countdown
         document.getElementById('dobby').classList.remove('animate-dobby');
@@ -136,7 +138,7 @@ function harryDobbyGame() {
         let timerInterval = setInterval(() => {
             timeCounter = timeCounter - 1;
             if (timeCounter > -1) {
-                document.getElementById('timer').innerHTML = timeCounter + 'Seconds';
+                document.getElementById('timer').innerHTML = 'Get ready! The game will resume in ' + timeCounter + ' Seconds';;
             }
         }, 1000);
 
@@ -146,7 +148,7 @@ function harryDobbyGame() {
 
             // Start the game logic
             startGame();
-
+            document.getElementById('timer').style.visibility = 'hidden';
             clearInterval(timerInterval);
         }, 6000);
             setTimeout(function (){
