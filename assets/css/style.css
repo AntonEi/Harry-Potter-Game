@@ -36,7 +36,12 @@ section{
 }
 
 #question-container{
-    background-color: #ffffff;
+    background-color: #740001;
+    padding: 50px;
+    margin: 20px;
+    width: 500px;
+    height: 170px;
+    box-shadow: 0 0 10px 2px;
 }
 .container {
     width: 600px;
@@ -51,6 +56,7 @@ section{
 }
 
 .btn-grid {
+    height: 100px;
     display: grid; 
     grid-template-columns: repeat(2, auto);
     gap: 10px;
@@ -122,6 +128,11 @@ section{
     #game {
         width: 650px;
         height: 330px;
+    }
+
+    #question-container {
+        padding: 50px;
+        margin: 70px 20px 20px 20px;
     }
     
     .timescore {
