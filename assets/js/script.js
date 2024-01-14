@@ -126,20 +126,30 @@ function showQuestion(question){
     });
 }
 
-function resetState() {
-    console.log('before loop')
+function resetState() {    
     continueButton.classList.add('hide');
-    console.log('before loop')
     while (answerButtonsElement.firstChild) {
-        console.log('removing child loop')
         answerButtonsElement.removeChild(answerButtonsElement.firstChild); 
     }
-    console.log('after loop')
 }
 
 
 function selectAnswer(e) {
+    let selectedButton = e.target
+    let correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+}
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
+    }
 }
 
 let questions = [
@@ -148,8 +158,8 @@ let questions = [
         answers: [
             { text: 'Harry potter', correct: true },
             { text: 'Dumblerdore', correct: false },
-            { text: 'Hagrid', correct: true },
-            { text: 'Hermeiny', correct: true },
+            { text: 'Hagrid', correct: false },
+            { text: 'Hermeiny', correct: false },
         ]
     }
 ]
