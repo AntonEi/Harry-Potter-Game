@@ -1,10 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merienda:wght@300;400;500;600;700&display=swap');
+
+
+
 body{
     padding: 0;
     margin: 0;
     background: url(../images/harry-map.jpg) no-repeat center center/cover;
     background-size: cover;
     background-attachment: fixed;
-    
+    font-family: 'Merienda', sans-serif;
+}
+h1{
+    color: white;
+    font-family: 'Cinzel Decorative', sans-serif;
+}
+
+p{
+    color: white;
+}
+
+#question{
+    color: white
 }
 
 .timescore {
@@ -66,10 +82,7 @@ section{
 .btn{
     background: orange;
     padding: 5px 10px;
-}
-
-.btn.correct {
-    background: #ffffff;
+    color: white;
 }
 
 .btn.wrong {
@@ -128,6 +141,10 @@ section{
     #game {
         width: 650px;
         height: 330px;
+    }
+
+    h1 {
+        font-size: 50px;
     }
 
     #question-container {

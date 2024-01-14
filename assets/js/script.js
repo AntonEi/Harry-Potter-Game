@@ -11,7 +11,7 @@ function harryDobbyGame() {
     let initialScore = 0;
     let checkCounter = 0;
     let gameStarted = false;
-    let targetScore = [100,300,500,700,900];
+    let targetScore = [100,400,600,800,1000];
     /**
      * This function makes harry jump.
      * It restarts every 0,5 sec
@@ -59,7 +59,7 @@ function harryDobbyGame() {
             }
         }
         if (targetScore.includes(initialScore)){
-            initialScore += 10; // Add 10 points to the score
+            initialScore += 100; // Add 100 points to the score
             document.getElementById('score').innerHTML = initialScore + ' Points';
             startQuiz();
             clearInterval(checkDead);
@@ -113,7 +113,7 @@ function harryDobbyGame() {
     setTimeout(function () {
         startGame();
         clearInterval(timerInterval);
-        document.getElementById('timer').style.visibility = 'hidden';
+        document.getElementById('timer').classList.add('hide');
     }, 6000);
 
     let game = document.getElementById ('game')
@@ -129,7 +129,8 @@ function harryDobbyGame() {
         console.log("restart harry game");
         questionContainerElement.classList.add('hide');
         game.classList.remove('hide');
-        document.getElementById('timer').style.visibility = 'visible';
+        document.getElementById('guess-text').classList.add('hide');
+        document.getElementById('timer').classList.remove('hide');
 
         // Stop Dobby's animation during the countdown
         document.getElementById('dobby').classList.remove('animate-dobby');
@@ -148,7 +149,7 @@ function harryDobbyGame() {
 
             // Start the game logic
             startGame();
-            document.getElementById('timer').style.visibility = 'hidden';
+            document.getElementById('timer').classList.add('hide');
             clearInterval(timerInterval);
         }, 6000);
             setTimeout(function (){
@@ -180,7 +181,7 @@ function harryDobbyGame() {
                     }
                 }
                 if (targetScore.includes(initialScore)) {
-                    initialScore += 10; // Add 10 points to the score
+                    initialScore += 100; // Add 100 points to the score
                     document.getElementById('score').innerHTML = initialScore + ' Points';
                     startQuiz();
                     clearInterval(checkDead);
@@ -195,6 +196,7 @@ function harryDobbyGame() {
     function startQuiz(){
         console.log("Quiz Started");
         game.classList.add('hide')
+        document.getElementById('guess-text').classList.remove('hide');
         shuffledQuestions = questions.sort(() => Math.random() - .5)
         currentQuestionIndex = 0
         questionContainerElement.classList.remove('hide')
@@ -250,7 +252,6 @@ function harryDobbyGame() {
         let correct = selectedButton.dataset.correct === 'true'; 
         setStatusClass(selectedButton, correct);
 
-        continueButton.classList.remove('hide');
     }
 
     /**
@@ -268,6 +269,8 @@ function harryDobbyGame() {
         } else {
             element.classList.add('wrong')
             alert('you lose')
+            youLose()
+            harryDobbyGame();
         }
     }
     /**
@@ -298,8 +301,8 @@ function harryDobbyGame() {
         {
             question: 'Who is Harry\'s best friend?',
             answers: [
-                { text: 'Ron Weasley', correct: true },
                 { text: 'Draco Malfoy', correct: false },
+                { text: 'Ron Weasley', correct: true },
                 { text: 'Neville Longbottom', correct: false },
                 { text: 'Cedric Diggory', correct: false },
             ]
@@ -307,26 +310,26 @@ function harryDobbyGame() {
         {
             question: 'What is the name of the magical school Harry attends?',
             answers: [
-                { text: 'Hogwarts School of Witchcraft and Wizardry', correct: true },
                 { text: 'Beauxbatons Academy of Magic', correct: false },
                 { text: 'Durmstrang Institute', correct: false },
+                { text: 'Hogwarts School of Witchcraft and Wizardry', correct: true },
                 { text: 'Ilvermorny School of Witchcraft and Wizardry', correct: false },
             ]
         },
         {
             question: 'What is the name of Harry\'s owl?',
             answers: [
-                { text: 'Hedwig', correct: true },
                 { text: 'Errol', correct: false },
                 { text: 'Crookshanks', correct: false },
                 { text: 'Pigwidgeon', correct: false },
+                { text: 'Hedwig', correct: true },
             ]
         },
         {
             question: 'Who is the headmaster of Hogwarts?',
             answers: [
-                { text: 'Albus Dumbledore', correct: true },
                 { text: 'Severus Snape', correct: false },
+                { text: 'Albus Dumbledore', correct: true },
                 { text: 'Minerva McGonagall', correct: false },
                 { text: 'Gellert Grindelwald', correct: false },
             ]
