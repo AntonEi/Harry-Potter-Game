@@ -59,7 +59,8 @@ function harryDobbyGame() {
             }
         }
         if (targetScore.includes(initialScore)){
-
+            initialScore += 10; // Add 10 points to the score
+            document.getElementById('score').innerHTML = initialScore + ' Points';
             startQuiz();
             clearInterval(checkDead);
         }
@@ -128,7 +129,62 @@ function harryDobbyGame() {
         questionContainerElement.classList.add('hide');
         game.classList.remove('hide');
 
-    
+        // Stop Dobby's animation during the countdown
+        document.getElementById('dobby').classList.remove('animate-dobby');
+
+        let timeCounter = 5;
+        let timerInterval = setInterval(() => {
+            timeCounter = timeCounter - 1;
+            if (timeCounter > -1) {
+                document.getElementById('timer').innerHTML = timeCounter + 'Seconds';
+            }
+        }, 1000);
+
+        setTimeout(function () {
+            // Resume Dobby's animation when the game starts
+            document.getElementById('dobby').classList.add('animate-dobby');
+
+            // Start the game logic
+            startGame();
+
+            clearInterval(timerInterval);
+        }, 6000);
+            setTimeout(function (){
+                var checkDead = setInterval(function () {
+                checkCounter = checkCounter + 1;
+                let userLoses = false;
+                var harryTop = parseInt(window.getComputedStyle(harry).getPropertyValue("top"));
+                var dobbyLeft = parseInt(window.getComputedStyle(dobby).getPropertyValue("left"));
+
+                if (isLaptop()) {
+                    if (dobbyLeft < 80 && dobbyLeft > 0 && harryTop >= 190 && harryTop <= 250) {
+                        youLose();
+                    }
+                } else if (isTablet()) {
+
+                    if (dobbyLeft < 45 && dobbyLeft > 0 && harryTop >= 190 && harryTop <= 250) {
+                        youLose();
+                    }
+                } else {
+
+                    if (dobbyLeft < 45 && dobbyLeft > 0 && harryTop >= 50 && harryTop <= 150) {
+                        youLose();
+                    }
+                }
+                if (checkCounter % 100 === 0 && gameStarted === true) {
+                    if (userLoses == false) {
+                        initialScore = initialScore + 10;
+                        document.getElementById('score').innerHTML = initialScore + ' Points';
+                    }
+                }
+                if (targetScore.includes(initialScore)) {
+                    initialScore += 10; // Add 10 points to the score
+                    document.getElementById('score').innerHTML = initialScore + ' Points';
+                    startQuiz();
+                    clearInterval(checkDead);
+                }
+            }, 10);
+        }, 6000);    
     }
     /**
     * Initiates the quiz game.
