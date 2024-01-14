@@ -11,7 +11,7 @@ function harryDobbyGame() {
     let initialScore = 0;
     let checkCounter = 0;
     let gameStarted = false;
-    let targetScore = [100,400,600,800,1000];
+    let targetScore = [100,400,700,900,1100,1500];
     /**
      * This function makes harry jump.
      * It restarts every 0,5 sec
