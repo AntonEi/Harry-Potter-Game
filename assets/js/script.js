@@ -130,7 +130,7 @@ let checkIfDead = () => {
 function youLose() {
     document.getElementById('dobby').classList.remove('animate-dobby');
     dobby.style.display = "none";
-    alert("You lose.");
+    alert("Game Over! Click 'OK' to restart the game :)");
     clearInterval(checkDead);
     let questionContainerElement = document.getElementById('question-container');
     questionContainerElement.classList.add('hide');
@@ -327,5 +327,13 @@ function harryDobbyGame() {
     }, 6000);
 }
 
+function setUpStartButton() {
+    // Add an event listener to the start button
+    document.getElementById('start-game-btn').addEventListener('click', function () {
+        // Call the function to start the game when the button is clicked
+        harryDobbyGame();
+        document.getElementById('start-game-btn').classList.add("hide");
+    });
+}
 
-harryDobbyGame();
+setUpStartButton();
