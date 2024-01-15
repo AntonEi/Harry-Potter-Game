@@ -66,4 +66,36 @@ Restarts the game after a loss, providing players with the opportunity to contin
   - No errors or warnings were returned when passing through the the [JSHint Validator](https://jshint.com/)
 ![JSHint Validator Results]()
 
+### Accessibility
 
+- The site achieved a Lighthouse accessibility score of 100% on both mobile and desktop which confirms that the colours and fonts chosen are easy to read and accessible
+
+Mobile Lighthouse Score
+
+![Mobile Lighthouse Score](docs/readme_images/mobile_lighthouse.png)
+
+Desktop Lighthouse Score
+
+![Desktop Lighthouse Score](docs/readme_images/desktop_lighthouse.png)
+
+### Button Testing
+
+-All buttons, including the Start button and the answer buttons in the quiz section, have been manually tested. They direct the user to the correct sections of the game.
+
+### Game Mechanics Testing
+
+- The game mechanics have been thoroughly tested to ensure a seamless and enjoyable user experience. Key aspects include:
+  - Harry's Jumping Mechanism: Checked to ensure Harry jumps over Dobby correctly.
+  - Dobby's Movement: Verified that Dobby moves towards Harry as expected.
+  - Score Tracking: Ensured the scoring system increments correctly when Harry successfully jumps over Dobby.
+  - Quiz Integration: Validated that the quiz section triggers when the user accumulates a certain score.
+  - Quiz Questions: Confirmed that quiz questions are displayed randomly and that the correct answer progresses the game.
+  - Game Over Handling: Checked that the game responds appropriately when Harry is hit by Dobby or when a wrong quiz answer is selected.
+
+### Responsive Design
+
+- The game has been tested across different screen sizes to ensure a responsive and visually appealing layout. Media queries have been implemented to adapt the game elements for a better user experience on various devices.
+
+  - [Responsinator](http://www.responsinator.com/?url=https%3A%2F%2Fantonei.github.io%2FHarry-Potter-game%2F)
+
+### Fixed Bugs
