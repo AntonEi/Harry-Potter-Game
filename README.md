@@ -99,3 +99,41 @@ Desktop Lighthouse Score
   - [Responsinator](http://www.responsinator.com/?url=https%3A%2F%2Fantonei.github.io%2FHarry-Potter-game%2F)
 
 ### Fixed Bugs
+
+#### Double Points on Incorrect Quiz Answer
+
+- When a user guessed the quiz question wrong, the game was restarting twice, resulting in double points being awarded.
+- The issue was identified in the restartHarryGame function, specifically in the points calculation logic.
+- The initialScore was being incremented on every restart, leading to the double points bug.
+- To resolve this, the points increment logic was removed from the restartHarryGame function.
+
+#### Game Continues After Dobby Hits Harry
+
+- Previously, when the game restarted after Dobby hit Harry, the game did not stop. This led to unexpected behavior and a lack of synchronization between the game restart and the end condition.
+- The issue was identified in the youLose function, responsible for handling the game-over condition.
+- The clearInterval(checkDead); statement was not effectively stopping the game loop, allowing the game to continue.
+
+### Known Bugs 
+There are no known bugs.
+
+## Technologies Used
+
+### Languages
+- JavaScript
+- HTML5
+- CSS3
+
+### Frameworks - Libraries - Programs Used
+
+- [Am I Responsive](http://ami.responsivedesign.is/) - Used to verify responsiveness of website on different devices.
+- [Responsinator](http://www.responsinator.com/) - Used to verify responsiveness of website on different devices.
+- [Balsamiq](https://balsamiq.com/) - Used to generate Wireframe images.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for overall development and tweaking, including testing responsiveness and performance.
+- [Font Awesome](https://fontawesome.com/) - Used for icons.
+- [GitHub](https://github.com/) - Used for version control and hosting.
+- [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
+- [TinyPNG](https://tinypng.com/) - Used to compress images to reduce file size without a reduction in quality.
+- [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+- [Favicon](https://favicon.io/) - Used to create the favicon.
+- [JSHint](https://jshint.com/) - Used for JS Validation.
+
