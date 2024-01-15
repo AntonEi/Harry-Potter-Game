@@ -22,3 +22,13 @@ Welcome to Harry's Magical Jump Quest, an enchanting game set in the magical wor
   - As a frequent user I want to be able to master the art of timing Harry's jumps over Dobby
   - As a frequent user I want to be able to Celebrate success in the quiz phase by answering questions correctly
 
+## Design
+
+### Imagery
+The Marauder's Map forms the backdrop, while the majestic Hogwarts Castle silhouette serves as the overall game background.
+
+### Colours
+The color scheme includes a dark background, inspired by the Marauder's Map, with warm tones of orange for buttons, creating a visually appealing contrast. White text ensures visibility against the intricate details of the map and castle.
+
+### Fonts
+The use of Google Fonts, specifically 'Cinzel Decorative' for headings and 'Merienda' for body text, enhances the magical and whimsical feel of the game.
