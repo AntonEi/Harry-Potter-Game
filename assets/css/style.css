@@ -92,7 +92,7 @@ section{
 .btn{
     background: orange;
     padding: 5px 10px;
-    color: white;
+    color: black;
 }
 
 .btn.wrong {
