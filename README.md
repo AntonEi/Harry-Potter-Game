@@ -48,3 +48,7 @@ The use of Google Fonts, specifically 'Cinzel Decorative' for headings and 'Meri
 ### Game over
 Restarts the game after a loss, providing players with the opportunity to continue their magical journey and improve their performance.
 
+### Features Left to Implement
+- A scoreboard
+- Some harry potter music
+

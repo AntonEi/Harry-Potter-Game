@@ -134,8 +134,9 @@ function youLose() {
     clearInterval(checkDead);
     let questionContainerElement = document.getElementById('question-container');
     questionContainerElement.classList.add('hide');
+    let game = document.getElementById('game');
     game.classList.remove('hide');
-    document.getElementById('guess-text').classList.add('hide')
+    document.getElementById('guess-text').classList.add('hide');
     harryDobbyGame();
 }
 
@@ -169,7 +170,7 @@ function restartHarryGame() {
     let timerInterval = setInterval(() => {
         timeCounter = timeCounter - 1;
         if (timeCounter > -1) {
-            document.getElementById('timer').innerHTML = 'Get ready! The game will resume in ' + timeCounter + ' Seconds';;
+            document.getElementById('timer').innerHTML = 'Get ready! The game will resume in ' + timeCounter + ' Seconds';
         }
     }, 1000);
 
