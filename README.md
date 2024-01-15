@@ -32,3 +32,19 @@ The color scheme includes a dark background, inspired by the Marauder's Map, wit
 
 ### Fonts
 The use of Google Fonts, specifically 'Cinzel Decorative' for headings and 'Merienda' for body text, enhances the magical and whimsical feel of the game.
+
+## Features
+### Home page 
+  the landing page of the website has a simple layout witck includes a H1 that says "Harry's Magical Jump Quest." Players are aslo greeted with a "Start Game" button, initiating the mystical quest.
+
+### Gameplay
+  - Control Harry's movements with a simple click.
+  - Score points as Harry successfully jumps over Dobby. Survive for more than 10 seconds to trigger a quiz challenge and earn additional rewards.
+
+### Quiz Challenges
+  - Test your Harry Potter knowledge with engaging quiz challenges.
+  - Answer correctly to earn points and progress further in the game.
+
+### Game over
+Restarts the game after a loss, providing players with the opportunity to continue their magical journey and improve their performance.
+
