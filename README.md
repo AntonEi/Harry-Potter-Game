@@ -37,6 +37,8 @@ The use of Google Fonts, specifically 'Cinzel Decorative' for headings and 'Meri
 ### Home page 
   the landing page of the website has a simple layout witck includes a H1 that says "Harry's Magical Jump Quest." Players are aslo greeted with a "Start Game" button, initiating the mystical quest.
 
+!
+
 ### Gameplay
   - Control Harry's movements with a simple click.
   - Score points as Harry successfully jumps over Dobby. Survive for more than 10 seconds to trigger a quiz challenge and earn additional rewards.
@@ -137,3 +139,52 @@ There are no known bugs.
 - [Favicon](https://favicon.io/) - Used to create the favicon.
 - [JSHint](https://jshint.com/) - Used for JS Validation.
 
+## Deployment 
+
+The site was deployed using GitHub pages. The steps to deploy using GitHub pages are:
+
+1. Go to the repository on GitHub.com
+2. Select 'Settings' near the top of the page.
+3. Select 'Pages' from the menu bar on the left of the page.
+4. Under 'Source' select the 'Branch' dropdown menu and select the main branch.
+5. Once selected, click the 'Save'.
+6. Deployment should be confirmed by a message on a green background saying "Your site is published at" followed by the web address.
+
+The live link can be found here - [Harry's Magical Jump Quest](https://antonei.github.io/Harry-Potter-game/)
+
+## Cloning
+
+To clone this repository follow the below steps:
+
+1. Locate the repository at this link [Harry's Magical Jump Quest](https://github.com/AntonEi/Harry-Potter-game).
+2. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the prefered cloning option, and then copy the link provided.
+3. Open **Terminal**.
+4. In Terminal, change the current working directory to the desired location of the cloned directory.
+5. Type **'git clone'**, and then paste the URL copied from GitHub earlier.
+6. Type **'Enter'** to create the local clone.
+
+## Credits
+
+### Content
+
+I would like to express my gratitude to [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) for invaluable tutorials and guidance. The implementation of the quiz section in this project
+
+And thanks to the tutorial by [KnifeCircus](https://www.youtube.com/@KnifeCircus) for providing insights and guidance on implementing the Harry Dobby game.
+
+### Media 
+
+The pictures are from 
+
+- <https://www.vhv.rs/viewpic/hxbTxhm_dobby-sculpture001-v-1533119561-harry-potter-dobby-png/#google_vignette> - Dobby
+- https://www.pinterest.se/pin/779263541789919712/ - Harry
+- https://100gamesvictorfanficstories.fandom.com/wiki/Hogwarts_School_of_Witchcraft_and_Wizardry - Hogwards
+- https://www.pinterest.se/pin/168110998580862518/ - Marauder's Map
+
+
+## Acknowledgments
+
+My mentor Antonio for his support and advice.
+
+My fellow student Elin Dalenbäck
+
+The Code Institute slack community for their quick responses and very helpful feedback!
