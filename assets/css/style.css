@@ -26,7 +26,7 @@ p{
 }
 
 #timer {
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
 #question{
@@ -66,7 +66,7 @@ section{
     padding: 50px;
     margin: 20px;
     width: 500px;
-    height: 170px;
+    height: 250px;
     box-shadow: 0 0 10px 2px;
 }
 .container {
@@ -101,6 +101,17 @@ section{
 
 #continue-btn{
     background: transparent;
+}
+.start-btn{
+    color: #3E3E3E;
+    height: 50px;
+    width: 200px;
+}
+
+#watch-out{
+    margin-left: 100px;
+    color: white;
+    font-weight: bold;
 }
 
 .hide {
@@ -156,6 +167,10 @@ section{
     h1 {
         font-size: 35px;
     }
+
+    #timer {
+        margin-top: 50px;
+    }
     
     #score {
         margin-left: auto;
@@ -165,8 +180,14 @@ section{
     #question-container {
         padding: 50px;
         margin: 70px 20px 20px 20px;
+        height: 170px;
     }
     
+    #watch-out {
+        margin-left: 430px;
+        font-size: 20px;
+    }
+
     .timescore {
     width: 650px;
     }
@@ -229,6 +250,11 @@ section{
     }
     h1 {
         font-size: 50px;
+    }
+
+    #watch-out {
+        margin-left: 445px;
+        font-size: 30px;
     }
 
     .timescore {

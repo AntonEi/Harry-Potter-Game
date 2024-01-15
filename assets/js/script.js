@@ -149,6 +149,7 @@ function startGame() {
     console.info('clicked');
     document.addEventListener('click', jump);
     document.getElementById('dobby').classList.add('animate-dobby');
+    document.getElementById('watch-out').classList.add('hide');
     gameStarted = true;
 }
 
@@ -159,6 +160,7 @@ function restartHarryGame() {
     game.classList.remove('hide');
     document.getElementById('guess-text').classList.add('hide');
     document.getElementById('timer').classList.remove('hide');
+    document.getElementById('watch-out').classList.remove('hide');
 
     // Stop Dobby's animation during the countdown
     document.getElementById('dobby').classList.remove('animate-dobby');
@@ -302,6 +304,7 @@ function harryDobbyGame() {
 
     dobby.style.display = "inline";
     document.getElementById('timer').classList.remove('hide');
+    document.getElementById('watch-out').classList.remove('hide');
     initialScore = 0;
     checkCounter = 0;
     gameStarted = false;
