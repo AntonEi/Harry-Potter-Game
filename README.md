@@ -33,22 +33,33 @@ The color scheme includes a dark background, inspired by the Marauder's Map, wit
 ### Fonts
 The use of Google Fonts, specifically 'Cinzel Decorative' for headings and 'Merienda' for body text, enhances the magical and whimsical feel of the game.
 
-## Features
-### Home page 
-  the landing page of the website has a simple layout witck includes a H1 that says "Harry's Magical Jump Quest." Players are aslo greeted with a "Start Game" button, initiating the mystical quest.
+### Wireframes
 
-!
+Wireframes were produced using Balsamiq.
+
+![Desktop Wireframe](docs/wireframes/desktop-wireframe.png)
+
+![Mobile Wireframe](docs/wireframes/mobile-wireframe.png)
+
+## Features
+### Home Page 
+  The landing page of the website has a simple layout witck includes a H1 that says "Harry's Magical Jump Quest." Players are aslo greeted with a "Start Game" button, initiating the mystical quest.
+
+![Start page](docs/readme-img/home-page.png)
 
 ### Gameplay
-  - Control Harry's movements with a simple click.
+  - Control Harry's jumps with a simple click.
   - Score points as Harry successfully jumps over Dobby. Survive for more than 10 seconds to trigger a quiz challenge and earn additional rewards.
+![Game](docs/readme-img/harry-jump.png)
 
 ### Quiz Challenges
   - Test your Harry Potter knowledge with engaging quiz challenges.
   - Answer correctly to earn points and progress further in the game.
+![Quiz Page](docs/readme-img/quiz-pic.png)
 
 ### Game over
 Restarts the game after a loss, providing players with the opportunity to continue their magical journey and improve their performance.
+![Quiz Page](docs/readme-img/game-over.png)
 
 ### Features Left to Implement
 - A scoreboard
@@ -66,7 +77,7 @@ Restarts the game after a loss, providing players with the opportunity to contin
 
 - #### Javascript
   - No errors or warnings were returned when passing through the the [JSHint Validator](https://jshint.com/)
-![JSHint Validator Results]()
+![JSHint Validator Results](docs/readme-img/js-vali.png)
 
 ### Accessibility
 
