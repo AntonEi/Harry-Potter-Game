@@ -158,6 +158,17 @@ section{
     0%{left:250px;}
     100%{left:-40px}
 }
+
+@media screen and (max-width: 425px) {
+    #timer {
+        width: 200px;
+    }
+    
+    .btn {
+        width: 120px;
+    }
+}
+
 @media screen and (min-width: 653px){
     #game {
         width: 650px;
