@@ -132,6 +132,10 @@ function youLose() {
     dobby.style.display = "none";
     alert("You lose.");
     clearInterval(checkDead);
+    let questionContainerElement = document.getElementById('question-container');
+    questionContainerElement.classList.add('hide');
+    game.classList.remove('hide');
+    document.getElementById('guess-text').classList.add('hide')
     harryDobbyGame();
 }
 
@@ -175,42 +179,6 @@ function restartHarryGame() {
         startGame();
         document.getElementById('timer').classList.add('hide');
         clearInterval(timerInterval);
-    }, 6000);
-    setTimeout(function () {
-        var checkDead = setInterval(function () {
-            checkCounter = checkCounter + 1;
-            let userLoses = false;
-            var harryTop = parseInt(window.getComputedStyle(harry).getPropertyValue("top"));
-            var dobbyLeft = parseInt(window.getComputedStyle(dobby).getPropertyValue("left"));
-
-            if (isLaptop()) {
-                if (dobbyLeft < 80 && dobbyLeft > 0 && harryTop >= 190 && harryTop <= 250) {
-                    youLose();
-                }
-            } else if (isTablet()) {
-
-                if (dobbyLeft < 45 && dobbyLeft > 0 && harryTop >= 190 && harryTop <= 250) {
-                    youLose();
-                }
-            } else {
-
-                if (dobbyLeft < 45 && dobbyLeft > 0 && harryTop >= 50 && harryTop <= 150) {
-                    youLose();
-                }
-            }
-            if (checkCounter % 100 === 0 && gameStarted === true) {
-                if (userLoses == false) {
-                    initialScore = initialScore + 10;
-                    document.getElementById('score').innerHTML = initialScore + ' Points';
-                }
-            }
-            if (targetScore.includes(initialScore)) {
-                initialScore += 100; // Add 100 points to the score
-                document.getElementById('score').innerHTML = initialScore + ' Points';
-                startQuiz();
-                clearInterval(checkDead);
-            }
-        }, 10);
     }, 6000);
 }
 
@@ -297,11 +265,13 @@ function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
         element.classList.add('correct');
+        let questionContainerElement = document.getElementById('question-container');
+        questionContainerElement.classList.add('hide');
+        game.classList.remove('hide');
         restartHarryGame();
         setInterval;
     } else {
         element.classList.add('wrong');
-        alert('you lose');
         youLose();
 
     }
@@ -356,3 +326,6 @@ function harryDobbyGame() {
         document.getElementById('timer').classList.add('hide');
     }, 6000);
 }
+
+
+harryDobbyGame();
