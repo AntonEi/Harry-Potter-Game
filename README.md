@@ -12,7 +12,13 @@ Welcome to Harry's Magical Jump Quest, an enchanting game set in the magical wor
 ## User Stories
 
 - ### First time use
-  - 
-
-
+  - As a first-time player, I want to quickly grasp the game's objective and the excitement of jumping over obstacles in the magical world of Harry Potter.
+  - As a first-time player, I want an intuitive and enjoyable gameplay experience without the need for complex instructions.
+  - As a first-time player, I want to dive into the game immediately without the requirement to sign up.
+- ### Returning User
+  - As a returning player, I want to seamlessly navigate through the game to relive the magical experience of guiding Harry through challenges.
+  - As a returning player, I want to be able to learn more knowledge about the Harry potter movies
+- ### Frequent user
+  - As a frequent user I want to be able to master the art of timing Harry's jumps over Dobby
+  - As a frequent user I want to be able to Celebrate success in the quiz phase by answering questions correctly
 
