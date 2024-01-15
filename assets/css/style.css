@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merienda:wght@300;400;500;600;700&display=swap');
 
-
-
 body{
     padding: 0;
     margin: 0;
@@ -10,43 +8,7 @@ body{
     background-attachment: fixed;
     font-family: 'Merienda', sans-serif;
 }
-h1{
-    color: white;
-    font-family: 'Cinzel Decorative', sans-serif;
-    font-size: 20px;
-}
-
-#score {
-    margin-left: auto;
-    font-size: 15px;
-}
-
-p{
-    color: white;
-}
-
-#timer {
-    margin-top: 15px;
-}
-
-#question{
-    color: white
-}
-
-.timescore {
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
-
-.flex-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
+/* Style for all the sections*/
 section{
     display: flex;
     align-items: center;
@@ -54,70 +16,48 @@ section{
     height: 100%;
     margin: 0;
 }
+/* Hides content for js*/
+.hide {
+    display: none;
+}
+
+h1{
+    color: white;
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-size: 20px;
+}
+
+p{
+    color: white;
+}
+/* Time score section STARTS here */
+.timescore {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* Makes the score stay on the right side*/
+#score {
+    margin-left: auto;
+    font-size: 15px;
+}
+
+#timer {
+    margin-top: 15px;
+}
+/* Time score section ENDS here */
+
+
+
+/* Game section STARTS here */
 #game{
     width: 280px;
     height: 150px;
     border: 1px solid black;
     background: url(../images/hogwarts-castle.webp) no-repeat center center/cover;
 }
-
-#question-container{
-    background-color: #740001;
-    padding: 50px;
-    margin: 20px;
-    width: 500px;
-    height: 250px;
-    box-shadow: 0 0 10px 2px;
-}
-.container {
-    width: 600px;
-    max-width: 80%;
-    display: flex;
-    border-radius: 5px;
-    padding: 10px;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.btn-grid {
-    height: 100px;
-    display: grid; 
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.btn{
-    background: orange;
-    padding: 5px 10px;
-    color: black;
-}
-
-.btn.wrong {
-    background: red;
-}
-
-#continue-btn{
-    background: transparent;
-}
-.start-btn{
-    color: #3E3E3E;
-    height: 50px;
-    width: 200px;
-}
-
-#watch-out{
-    margin-left: 100px;
-    color: white;
-    font-weight: bold;
-}
-
-.hide {
-    display: none;
-}
-
 #harry>img{
     width: 40px;
     height: 80px;
@@ -158,6 +98,66 @@ section{
     0%{left:250px;}
     100%{left:-40px}
 }
+/* Game section ENDS here */
+
+/* Quiz section STARTS here */
+.container {
+    width: 600px;
+    max-width: 80%;
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+/* Styles the color of the question text to white */
+#question{
+    color: white
+}
+
+#question-container{
+    background-color: #740001;
+    padding: 50px;
+    margin: 20px;
+    width: 500px;
+    height: 250px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    height: 100px;
+    display: grid; 
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn{
+    background: orange;
+    padding: 5px 10px;
+    color: black;
+}
+
+.btn.wrong {
+    background: red;
+}
+/* Quiz section ENDS here */
+
+/* Start & watch-out STARTS here */
+.start-btn{
+    color: #3E3E3E;
+    height: 50px;
+    width: 200px;
+}
+
+#watch-out{
+    margin-left: 100px;
+    color: white;
+    font-weight: bold;
+}
+/* Start & watch-out ENDS here */
+
 
 @media screen and (max-width: 425px) {
     #timer {
@@ -170,15 +170,12 @@ section{
 }
 
 @media screen and (min-width: 653px){
-    #game {
-        width: 650px;
-        height: 330px;
-    }
+   
 
     h1 {
         font-size: 35px;
     }
-
+    /* Time score section STARTS here */
     #timer {
         margin-top: 50px;
     }
@@ -187,16 +184,12 @@ section{
         margin-left: auto;
         font-size: 25px;
     }
+    /* Time score section ENDS here */
 
-    #question-container {
-        padding: 50px;
-        margin: 70px 20px 20px 20px;
-        height: 170px;
-    }
-    
-    #watch-out {
-        margin-left: 430px;
-        font-size: 20px;
+    /* Game section STARTS here */
+    #game {
+        width: 650px;
+        height: 330px;
     }
 
     .timescore {
@@ -252,24 +245,37 @@ section{
         100% {
             left: -40px
         }
-    }    
-}
-    @media screen and (min-width: 1024px) {  
-    #game {
-        width: 800px;
-        height: 450px;
     }
+    /* Game section ENDS here */
+    
+    /* Quiz section STARTS here */
+    #question-container {
+        padding: 50px;
+        margin: 70px 20px 20px 20px;
+        height: 170px;
+    }
+    /* Quiz section ENDS here */
+
+    /* Start & watch-out STARTS here */
+    #watch-out {
+        margin-left: 430px;
+        font-size: 20px;
+    } 
+    /* Start & watch-out ENDS here */
+}
+@media screen and (min-width: 1024px) {  
+    
     h1 {
         font-size: 50px;
     }
 
-    #watch-out {
-        margin-left: 445px;
-        font-size: 30px;
-    }
-
     .timescore {
         width: 800px;
+    }
+    
+    #game {
+        width: 800px;
+        height: 450px;
     }
 
     #harry>img {
@@ -282,6 +288,7 @@ section{
         height: 200px;
         top: 250px;
     }
+
     @keyframes jump {
         0% {
             /*The additional 3 pixels give the impression that Harry's landing is smoother*/
@@ -323,4 +330,8 @@ section{
         }
     }
 
+    #watch-out {
+        margin-left: 445px;
+        font-size: 30px;
     }
+}        
