@@ -195,7 +195,7 @@ function startQuiz() {
     console.log("Quiz Started");
     game.classList.add('hide');
     document.getElementById('guess-text').classList.remove('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
