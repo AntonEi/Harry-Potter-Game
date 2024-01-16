@@ -2,6 +2,9 @@
 
 Welcome to Harry's Magical Jump Quest, an enchanting game set in the magical world of Harry Potter! Immerse yourself in a thrilling adventure where you guide Harry to jump over Dobby and answer quizzes to earn points.
 
+The live link can be found here - [Harry's Magical Jump Quest](https://antonei.github.io/Harry-Potter-game/)
+
+![Harry's Magical Jump Quest Am I Responsive Image](docs/readme-img/harrydobby-responsive.png)
 ## Site Owner Goals
 
 - To provide users with a captivating and entertaining gaming experience in the magical world of Harry Potter.

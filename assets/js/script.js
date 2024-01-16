@@ -187,6 +187,7 @@ function restartHarryGame() {
 
 /**
    * Initiates the quiz game.
+   * This quiz was inspired by 'Web Dev Simplified' on youtube.
    * Hides the game elements, shuffles the questions, and displays the first question.
    */
 function startQuiz() {
@@ -292,7 +293,7 @@ function clearStatusClass(element) {
 
 
 /** This function is the jump game 
- * It was inspired by Knife... 
+ * This game was inspired by 'KnifeCircus' on YouTube
  * I have modified it for my own game
 */
 function harryDobbyGame() {
