@@ -85,11 +85,11 @@ Restarts the game after a loss, providing players with the opportunity to contin
 
 Mobile Lighthouse Score
 
-![Mobile Lighthouse Score](docs/readme_images/mobile_lighthouse.png)
+![Mobile Lighthouse Score](docs/readme-img/lighthouse-mobile.png)
 
 Desktop Lighthouse Score
 
-![Desktop Lighthouse Score](docs/readme_images/desktop_lighthouse.png)
+![Desktop Lighthouse Score](docs/readme-img/lighthouse.png)
 
 ### Button Testing
 
